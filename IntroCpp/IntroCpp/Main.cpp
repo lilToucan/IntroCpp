@@ -4,13 +4,13 @@
 #include "IntroCPP.h"
 #include "Puntatori.h"
 #include "Weapon.h"
+#include "Exercize.h"
 
 using namespace std;
 
 /*
 
 */
-
 struct Studente {
 	int anni;
 	float mediaVoti;
@@ -32,16 +32,15 @@ struct Studente {
 
 };
 
-int main()
+void Lezione2()
 {
-
-	Puntatore p =  Puntatore();
+	Puntatore p = Puntatore();
 
 	p.IntPointerFunction();
 
-	Weapon* sword = new Weapon ("Sword",MELEE,100);
+	Weapon* sword = new Weapon("Sword", MELEE, 100);
 
-//	int* newInt = new int(42);
+	//	int* newInt = new int(42);
 
 	sword->PrintInfo();
 
@@ -50,12 +49,8 @@ int main()
 
 	//if (sword == nullptr) 
 	//	return;
-	
 
 
-	cin.get();
-
-	return 0;
 }
 
 void OldMain()
@@ -175,4 +170,53 @@ void OldMain()
 
 
 #pragma endregion
+}
+
+void Esercizi()
+{
+	// esercizi
+
+	Exercise ex(ROSSO);
+
+	ex.PrintStatoSemaforo();
+	ex.CalcolaArea();
+	ex.NumeriPari();
+	ex.WhileFunction();
+	ex.DoWhileFunction();
+	ex.CheckPromozioneStudente();
+	ex.PrintColors();
+	ex.CalculatePrices();
+	ex.CheckPermessi();
+	ex.EsercizioOperatoriBitwiseShift();
+	ex.AsignPNum();
+	ex.AsignPrezzo();
+
+	int intToDuble = 5;
+	int* p_intToDuble = &intToDuble;
+	ex.DoubleInt(p_intToDuble);
+	std::cout << "int doubled is: " << intToDuble << "\n";
+
+	int a = 10;
+	int b = 20;
+	int* pa = &a;
+	int* pb = &b;
+	ex.SwapValue(pa, pb);
+	std::cout << "a= " << a << "\n" 
+			  << "b= " << b << "\n";
+
+	ex.ChangeParola();
+	ex.Print2ndArrayNum();
+	ex.ForWithPointer();
+	ex.Esercizio8Puntatori();
+	ex.Esercizio9Puntatori();
+	ex.Esercizio10Puntatori();
+}
+
+int main()
+{
+	Esercizi();
+
+	cin.get();
+
+	return 0;
 }

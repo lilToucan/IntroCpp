@@ -27,6 +27,9 @@
     <ClCompile Include="Puntatori.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Exercize.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntroCpp.h">
@@ -36,6 +39,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Puntatori.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercize.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

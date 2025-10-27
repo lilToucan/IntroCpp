@@ -18,6 +18,10 @@ public:
 	int arrayInt[5] = { 1,2,3,4,5 };
 
 	void IntPointerFunction();
+	
+	int Damage(int dmg, int dmgMult, int* totDmg);
+
+	int DamageRef(int dmg, int dmgMult, int& totDmg);
 
 private:
 	int HP = 100;
