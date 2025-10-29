@@ -1,6 +1,8 @@
 #pragma once
 #include <vector>
+#include <string>
 #include <iostream>
+
 
 enum StatoSemaforo
 {
@@ -9,7 +11,8 @@ enum StatoSemaforo
 	VERDE
 };
 
-struct Punto {
+struct Punto
+{
 	int x;
 	int y;
 };
@@ -18,7 +21,7 @@ struct Punto {
 class Exercise
 {
 public:
-#pragma region Esercizio Enum
+#pragma region Esercizio Enum 
 
 	StatoSemaforo statoAttuale;
 	Exercise(StatoSemaforo stato);
@@ -120,6 +123,7 @@ public:
 #pragma region Scambio di Valori (Swap)
 
 	void SwapValue(int* a, int* b);
+	void SwapValue(int* a, int* b, char null);
 
 #pragma endregion
 

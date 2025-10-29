@@ -16,6 +16,7 @@ void Exercise::CalcolaArea()
 		std::cout << "L'area raddoppiata supera i 100." << "\n";
 	else
 		std::cout << "L'area raddoppiata e' 100 o meno." << "\n";
+	
 
 }
 
@@ -39,6 +40,7 @@ void Exercise::WhileFunction()
 	}
 
 	std::cout << "il risultato e': " << risultato << "\n";
+
 }
 
 void Exercise::DoWhileFunction()
@@ -67,7 +69,7 @@ void Exercise::CheckPromozioneStudente()
 
 void Exercise::PrintColors()
 {
-	for (std::string color : Colori)
+	for (std::string& color : Colori)
 	{
 		std::cout << "il colore e': " << color << "\n";
 	}
@@ -77,7 +79,7 @@ void Exercise::CalculatePrices()
 {
 	for (int& price : prezzi)
 	{
-		price = (int)trunc(price * 1.1f);
+		price = static_cast<int>(trunc(price * 1.1f));
 	}
 
 	for (int& price : prezzi)
@@ -96,8 +98,9 @@ void Exercise::CheckPermessi()
 
 void Exercise::EsercizioOperatoriBitwiseShift()
 {
-	std::cout << "il numero moltipicato e': " << (valoreIniziale << 3) << "\n";
-	std::cout << "il numero diviso e': " << (valoreIniziale >> 2) << "\n";
+	int valMult = valoreIniziale << 3;
+	std::cout << "il numero moltipicato e': " << (valMult) << "\n";
+	std::cout << "il numero diviso e': " << (valMult >> 2) << "\n";
 }
 
 void Exercise::AsignPNum()
@@ -107,6 +110,8 @@ void Exercise::AsignPNum()
 	std::cout << "numero variabile normale: " << numero << "\n";
 	std::cout << "numero puntatore: " << *p_Num << "\n";
 
+	delete p_Num;
+	p_Num = nullptr;
 }
 
 void Exercise::AsignPrezzo()
@@ -114,19 +119,30 @@ void Exercise::AsignPrezzo()
 	p_prezzo = &prezzo;
 	*p_prezzo = 149.99;
 	std::cout << "il prezzo e': " << prezzo << "\n";
+	delete p_prezzo;
+	p_prezzo = nullptr;
 }
 
 void Exercise::DoubleInt(int* p_int)
 {
 	*p_int *= 2;
+
 }
 
 void Exercise::SwapValue(int* a, int* b)
 {
 	int x = *a;
-
 	*a = *b;
 	*b = x;
+}
+
+void Exercise::SwapValue(int* a, int* b, char null)
+{
+	
+	int* x = a;
+	a = b;
+	b = x;
+
 
 }
 
@@ -134,13 +150,17 @@ void Exercise::ChangeParola()
 {
 	p_parola = parola;
 	*p_parola = 'c';
+	// *parola= *(parola +1);
 	std::cout << "la parola ora e': " << parola << "\n";
+	delete p_parola;
 }
 
 void Exercise::Print2ndArrayNum()
 {
 	p_numeri = numeri;
-	std::cout << "il 3° numero e': " << *(p_numeri + 2) << "\n";
+	std::cout << "il terzo numero e': " << *(p_numeri + 2) << "\n";
+	delete p_numeri;
+	p_numeri = nullptr;
 
 }
 
@@ -153,11 +173,13 @@ void Exercise::ForWithPointer()
 		std::cout << "voto = " << *p_voto << "\n";
 		p_voto++;
 	}
+
+	delete p_voto;
 }
 
 void Exercise::Esercizio8Puntatori()
 {
-	int* x = new int(0);
+	int* x = new int(24);
 	*x = 123;
 	std::cout << x << "\n";
 	delete x;
@@ -185,6 +207,11 @@ void Exercise::Esercizio10Puntatori()
 	std::cout << "a= " << **p2 << "\n";
 	std::cout << "indirizzo di a= " << p1 << "\n";
 	std::cout << "indirizzo di p1= " << p2 << "\n";
+
+	delete p1;
+	delete p2;
+	p1 = nullptr;
+	p2 = nullptr;
 }
 
 Exercise::~Exercise()
@@ -202,7 +229,7 @@ void Exercise::PrintStatoSemaforo()
 		std::cout << "Attenzione! Prepararsi." << "\n";
 		break;
 	case VERDE:
-		std::cout << "VIA! Si può procedere." << "\n";
+		std::cout << "VIA! Si puï¿½ procedere." << "\n";
 		break;
 	default:
 		break;

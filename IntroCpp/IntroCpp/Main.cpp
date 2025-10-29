@@ -50,7 +50,6 @@ void Lezione2()
 	//if (sword == nullptr) 
 	//	return;
 
-
 }
 
 void OldMain()
@@ -69,7 +68,7 @@ void OldMain()
 
 	// Floating point, con precisione singola
 	float numeroDecimale = 3.14f; // numero decimale a precisione singola
-	float numeroDecimalePiccolo = .2f; // numero decimale più piccolo di 1
+	float numeroDecimalePiccolo = .2f; // numero decimale piï¿½ piccolo di 1
 
 	// Floating point, con precisione doppia
 	double numeroDecimaleDoppiaPrecisione = 3.141592653589793; // numero decimale a precisione doppia
@@ -78,7 +77,7 @@ void OldMain()
 	char carattere = 'A'; // singolo carattere racchiuso tra apici singoli
 
 	// Booleano
-	bool valoreBooleano = true; // valore booleano, può essere true o false
+	bool valoreBooleano = true; // valore booleano, puï¿½ essere true o false
 	bool altroValoreBooleano = false;
 
 	// Stampa i valori delle variabili
@@ -195,15 +194,27 @@ void Esercizi()
 	int* p_intToDuble = &intToDuble;
 	ex.DoubleInt(p_intToDuble);
 	std::cout << "int doubled is: " << intToDuble << "\n";
+	delete p_intToDuble;
+	p_intToDuble = nullptr;
 
 	int a = 10;
 	int b = 20;
 	int* pa = &a;
 	int* pb = &b;
+
+	
 	ex.SwapValue(pa, pb);
 	std::cout << "a= " << a << "\n" 
 			  << "b= " << b << "\n";
+	// ex.SwapValue(pa,pb,'d');
+	// std::cout << "pa= " << pa << " &A= " << &a << "\n";
+	// std::cout << "pb= " << pb << " &B= " << &b <<  "\n";
 
+	delete pa;
+	delete pb;
+	pa = nullptr;
+	pb = nullptr;
+	
 	ex.ChangeParola();
 	ex.Print2ndArrayNum();
 	ex.ForWithPointer();
