@@ -17,7 +17,6 @@ struct Punto
 	int y;
 };
 
-
 class Exercise
 {
 public:

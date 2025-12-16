@@ -123,16 +123,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ClassWithInterface.cpp" />
+    <ClCompile Include="DelegateClass.cpp" />
     <ClCompile Include="Exercize.cpp" />
+    <ClCompile Include="IDrawable.cpp" />
     <ClCompile Include="IntroCpp.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Puntatori.cpp" />
+    <ClCompile Include="Shapes.cpp" />
+    <ClCompile Include="StaticClass.cpp" />
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClassWithInterface.h" />
+    <ClInclude Include="DelegateClass.h" />
     <ClInclude Include="Exercize.h" />
+    <ClInclude Include="IDrawable.h" />
+    <ClInclude Include="IFirstInterface.h" />
     <ClInclude Include="IntroCpp.h" />
     <ClInclude Include="Puntatori.h" />
+    <ClInclude Include="Shapes.h" />
+    <ClInclude Include="StaticClass.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
