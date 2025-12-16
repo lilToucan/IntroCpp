@@ -1,3 +1,0 @@
-﻿  Main.cpp
-C:\Users\alexy\Documents\SchoolProjects\Unreal\IntroCpp\IntroCpp\IntroCpp\Main.cpp(172,43): warning C4305: 'argument': truncation from 'double' to 'float'
-  IntroCpp.vcxproj -> C:\Users\alexy\Documents\SchoolProjects\Unreal\IntroCpp\IntroCpp\x64\Debug\IntroCpp.exe
