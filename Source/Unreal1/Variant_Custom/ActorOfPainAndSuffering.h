@@ -11,17 +11,16 @@ UCLASS(blueprintable)
 class UNREAL1_API AActorOfPainAndSuffering : public AActor, public IDamageable
 {
 	GENERATED_BODY()
-
-public: // variables
+// variables
+public: 
 	
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Healt")
 	float MaxHp;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Healt")
 	float CurrentHp;
 
-
-//public:  functions	
-
+//functions
+public:
 	AActorOfPainAndSuffering();
 	virtual void Tick(float DeltaTime) override;
 

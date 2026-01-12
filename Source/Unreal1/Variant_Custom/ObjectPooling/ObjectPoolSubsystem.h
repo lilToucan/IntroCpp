@@ -29,7 +29,6 @@ class UNREAL1_API UObjectPoolSubsystem : public UWorldSubsystem
 	GENERATED_BODY()
 
 	public:
-
 	UPROPERTY(BlueprintType,BlueprintAssignable,BlueprintReadWrite, Category="Object Pool Subsystem")
 	FInactiveObjectsChange OnInactivePoolingObjectsChanged;
 	

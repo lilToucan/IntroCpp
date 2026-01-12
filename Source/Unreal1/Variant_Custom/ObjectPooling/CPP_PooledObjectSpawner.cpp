@@ -13,7 +13,7 @@ ACPP_PooledObjectSpawner::ACPP_PooledObjectSpawner()
 
 void ACPP_PooledObjectSpawner::BeginPlay()
 {
-	PoolSubsystem = GetWorld()->GetSubsystem<UObjectPoolSubsystem>();
+		PoolSubsystem = GetWorld()->GetSubsystem<UObjectPoolSubsystem>();
 
 	PoolSubsystem->AddPool(ActorClass);
 	FireFunction();
@@ -40,9 +40,9 @@ void ACPP_PooledObjectSpawner::FireFunction()
 	GetWorldTimerManager().SetTimer(TimerHandle, this, &ACPP_PooledObjectSpawner::FireFunction, FireRate);
 
 	// get a position in a sphere of radious ... Radious
-	float randX = FMath::RandRange(-Radious, Radious);
-	float randY = FMath::RandRange(-Radious, Radious);
-	float randZ = FMath::RandRange(-Radious, Radious);
+	float randX = FMath::RandRange(-Radius, Radius);
+	float randY = FMath::RandRange(-Radius, Radius);
+	float randZ = FMath::RandRange(-Radius, Radius);
 	FVector SpawnLocation = FVector(randX, randY, randZ) + GetActorLocation();
 
 	FTransform newTransform;

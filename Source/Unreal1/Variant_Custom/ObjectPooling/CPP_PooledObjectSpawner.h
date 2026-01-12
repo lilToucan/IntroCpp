@@ -19,7 +19,7 @@ public:
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Spawning")
 	float FireRate = 1;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Spawning")
-	float Radious = 300;
+	float Radius = 300;
 	
 	// Sets default values for this actor's properties
 	ACPP_PooledObjectSpawner();

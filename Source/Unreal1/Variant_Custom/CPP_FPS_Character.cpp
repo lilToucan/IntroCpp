@@ -3,7 +3,6 @@
 
 #include "Variant_Custom/CPP_FPS_Character.h"
 #include "CPP_FPS_InteractionComponent.h"
-#include "CPP_PickUp.h"
 #include "Damageable.h"
 #include "EnhancedInputComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
